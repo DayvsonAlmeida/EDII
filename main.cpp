@@ -1,5 +1,5 @@
 #include <iostream>
-#include "HashTable.h"
+#include "lib/HashTable.h"
 
 using namespace std;
 

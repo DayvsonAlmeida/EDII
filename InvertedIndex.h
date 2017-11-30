@@ -5,12 +5,13 @@
 class InvertedIndex{
  private:
   char *word;
-  int *frequency, *id_doc;
-  int max, filled;
+  int *frequency, *id_doc; //Id = 0 representa uma posição vazia, id>0
+  int max; //Max indica a quantidade de arquivos da coleção
+  int filled; //Filled indica quantos documentos já foram inseridos
  public:
   //Construtores
   InvertedIndex();
-  InvertedIndex(std::string, int max, int id_doc);
+  InvertedIndex(char* word, int max, int id);
   //Métodos
   char* getWord();
   void setWord(char* str);
@@ -24,8 +25,10 @@ class InvertedIndex{
   void setMax(int max);
 
   int getFrequencyId(int id);
-
-  
+  void setFrequencyId(int f, int id);
+  void addFrequencyId(int id);
+  void subFrequencyId(int id);
+  void initDoc(int id);
 };
 
 #endif
