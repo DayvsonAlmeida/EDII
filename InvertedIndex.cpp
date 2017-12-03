@@ -2,7 +2,9 @@
 #include <stdlib.h>
 
 InvertedIndex::InvertedIndex(){
-  this->word = this->frequency = this->id_doc =  NULL;
+  this->word = NULL;
+  this->frequency = NULL;
+  this->id_doc =  NULL;
   this->max = this->filled = 0;
 }
 
@@ -91,6 +93,9 @@ void InvertedIndex::addFrequencyId(int id){
 	return;
       }
     }
+    this->id_doc[this->filled] = id;
+    this->frequency[this->filled] = 1;
+    (this->filled)++;
   }
 }
 

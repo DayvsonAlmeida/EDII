@@ -2,6 +2,9 @@
 #define INVERTED_INDEX_H
 #include <string.h>
 
+/*
+ * NÃO EXISTE ID 0
+ */
 class InvertedIndex{
  private:
   char *word;
